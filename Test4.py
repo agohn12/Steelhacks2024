@@ -72,7 +72,7 @@ def check_fall():
                 font = cv2.FONT_HERSHEY_SIMPLEX
 
                 #Dispays Name and Demo in corners
-                cv2.putText(frame, 'Name', (50, 50), font, 1,
+                cv2.putText(frame, 'One Call Away', (50, 50), font, 1,
                     (0, 255, 255), 2, cv2.LINE_4)
                 
                 cv2.putText(frame, 'Demo', (1100, 50), font, 1,

@@ -11,11 +11,18 @@ We are a group of three newbies trying to make a very complex program... what co
 
 The goal of One Call Away, is to detect a fall, assess its severity, and autonomously call the victim's emergency contact if the victim remains fallen for more than thirty seconds. Note that in our demo, this time period is shortened to three seconds for practical purposes.
 
-All of the code for this project can be run in one file, [NAME].py. We imported the following libraries & APIs:
+All of the code for this project can be run in one file, OneCallAway.py. We imported the following libraries & APIs:
 * OpenCV, for doing tasks based on computer vision
 * Ultralytics YOLOv8, a real-time object detection model
 * Twilio, an API that makes phone calls with custom messages
 * Pygame, for playing a pre-recorded audio message
 
-In the Supplementary Files folder, you will find WIPs and additional materials that could be incorporated into [NAME].py to make object detection more robust. For example, classes.txt is an array of different objects. This could be used to distinguish people from inanimate objects. 
+In the Supplementary Files folder, you will find WIPs and additional materials that could be incorporated into OneCallAway.py to make object detection more robust. For example, classes.txt is an array of different objects. This could be used to distinguish people from inanimate objects. 
+
+## How to Run
+
+After cloning the repository run the command, "Python3 OneCallAway.py". Once you run this command the program will begin shortly. A screen will pop displaying the webcam output:
+
+<img width="1173" alt="Screenshot 2024-03-30 at 4 03 10 PM" src="https://github.com/agohn12/Steelhacks2024/assets/114429170/1a3e0e84-eeb9-4002-a875-45428902080c">
+
 

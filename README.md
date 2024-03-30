@@ -1,4 +1,5 @@
 # SteelHacks Project 2024: One Call Away
+### Team: Austin, Morgan, Ly
 
 We are a group of three newbies trying to make a very complex program... what could go wrong?
 
@@ -16,4 +17,5 @@ All of the code for this project can be run in one file, [NAME].py. We imported 
 * Twilio, an API that makes phone calls with custom messages
 * Pygame, for playing a pre-recorded audio message
 
+In the Supplementary Files folder, you will find WIPs and additional materials that could be incorporated into [NAME].py to make object detection more robust. For example, classes.txt is an array of different objects. This could be used to distinguish people from inanimate objects. 
 

@@ -13,14 +13,14 @@ def main():
     # continues to check if fall was detected
     while (not fall_detected):
         #Checks if fall has been detected
-        fall_detected = check_fall(i)
+        fall_detected = check_fall()
 
     #If fall has been detected make phone call to emergency contacts
     if(fall_detected):
         make_call()
 
 #Function that moitors webcam and checks for people falling
-def check_fall(i):
+def check_fall():
     
     #Loads an official model from YOLO library
     model = YOLO('yolov8n-pose.pt')

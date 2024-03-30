@@ -4,6 +4,7 @@ import time
 #Computer vision libraries
 from ultralytics import YOLO
 from twilio.rest import Client
+import pygame
 
 #Main function
 def main():
@@ -70,6 +71,13 @@ def check_fall():
                 #Sets font for screen
                 font = cv2.FONT_HERSHEY_SIMPLEX
 
+                #Dispays Name and Demo in corners
+                cv2.putText(frame, 'Name', (50, 50), font, 1,
+                    (0, 255, 255), 2, cv2.LINE_4)
+                
+                cv2.putText(frame, 'Demo', (1100, 50), font, 1,
+                    (0, 255, 255), 2, cv2.LINE_4)
+
                 #If falling detected check time; otherwise set hold back to zero
                 if falling:
                     #Gets time on the ground
@@ -80,6 +88,18 @@ def check_fall():
                     if hold > 3:
                         #Return true to call for help
                         print("HELP CALLED")
+                        # Initialize pygame mixer
+                        pygame.mixer.init()
+                        # Load sound file that plays "Emergency contact notified"
+                        sound_file = "audio.wav"
+                        sound = pygame.mixer.Sound(sound_file)
+                        # Play sound
+                        sound.play()
+                        # Wait for sound to finish
+                        pygame.time.wait(int(sound.get_length() * 1000))
+                        # Clean up: after message finishes, close video and make the call
+                        vid.release()
+                        cv2.destroyAllWindows()
                         return True
                 else:
                     hold = 0
@@ -101,9 +121,9 @@ def check_fall():
                     #Displays message on screen
                     cv2.putText(frame,  
                     'Fall Detected: calling in 3s',  
-                    (50, 50),  
-                    font, 1,  
-                    (0, 255, 255),
+                    (50, 90),  
+                    font, 1,
+                    (0, 0, 255),
                     2,
                     cv2.LINE_4)
                 else:

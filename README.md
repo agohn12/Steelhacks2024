@@ -1,5 +1,5 @@
 # SteelHacks Project 2024: One Call Away
-### Team: Austin, Morgan, Ly
+### Team: Austin, Ly, Morgan
 
 We are a group of three newbies trying to make a very complex program... what could go wrong?
 

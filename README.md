@@ -1,5 +1,6 @@
 # SteelHacks Project 2024: One Call Away
 ### Team: Austin, Ly, and Morgan
+The goal of One Call Away, is to detect a fall, assess its severity, and autonomously call the victim's emergency contact if the victim remains fallen for more than thirty seconds. Note that in our demo, this time period is shortened to three seconds for practical purposes.
 
 We are a group of three newbies trying to make a very complex program... what could go wrong?
 
@@ -10,8 +11,6 @@ We are a group of three newbies trying to make a very complex program... what co
 805,000 Americans every year also suffer from heart attacks, 3.4 million Americans suffere from seizures, and 2.8 million Americans also suffer from Anemia. These complications often lead to sudden collapsing. When people fall they often need assistance even if no one is around.
 
 ## Code description
-
-The goal of One Call Away, is to detect a fall, assess its severity, and autonomously call the victim's emergency contact if the victim remains fallen for more than thirty seconds. Note that in our demo, this time period is shortened to three seconds for practical purposes.
 
 All of the code for this project can be run in one file, OneCallAway.py. We imported the following libraries & APIs:
 * OpenCV, for doing tasks based on computer vision

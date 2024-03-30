@@ -42,5 +42,5 @@ while vid.isOpened():
     #     break
 
 vid.release()
-cv2.destoryAllWindows()
+cv2.destroyAllWindows()
 

@@ -1,6 +1,6 @@
 # SteelHacks Project 2024: One Call Away
 ### Team: Austin, Ly, and Morgan
-The goal of One Call Away, is to detect a fall, assess its severity, and autonomously call the victim's emergency contact if the victim remains fallen for more than thirty seconds. Note that in our demo, this time period is shortened to three seconds for practical purposes.
+The goal of One Call Away is to detect a fall, assess its severity, and autonomously call the victim's emergency contact if the victim remains fallen for more than thirty seconds. Note that in our demo, this time period is shortened to three seconds for practical purposes.
 
 We are a group of three newbies trying to make a very complex program... what could go wrong?
 

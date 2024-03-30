@@ -5,6 +5,10 @@ from ultralytics import YOLO
 model = YOLO('yolov8n-pose.pt')
 vid = cv2.VideoCapture(0) 
 
+classnames = []
+with open('SteelHacks2024/classes.txt', 'r') as f:
+    classnames = f.read().splitlines()
+
 while vid.isOpened():
     success, frame = vid.read()
 
@@ -16,16 +20,28 @@ while vid.isOpened():
             x1, y1, x2, y2 = box.xyxy[0]
             x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
             confidence = box.conf[0]
+            class_detect = box.cls[0]
+            class_detect = int(class_detect)
+            class_detect = classnames[class_detect]
             conf = math.ceil(confidence * 100)
 
             height = y2 - y1
             width = x2 - x1
             threshold = height - width
 
+            font = cv2.FONT_HERSHEY_SIMPLEX
+
             if conf > 80:
                 cv2.rectangle(frame, (x1,y1), (x1+x2, y1+y2), (0,255,0), 2)
-            if threshold < 0:
+            if threshold < 0 and class_detect == 'person' and y1 > 325:
                 cv2.rectangle(frame, (x1,y1), (x1+x2, y1+y2), (0,0,255), 2)
+                cv2.putText(frame,  
+                'Fall Detected',  
+                (50, 50),  
+                font, 1,  
+                (0, 255, 255),  
+                2,  
+                cv2.LINE_4) 
 
             else: pass
     
@@ -42,5 +58,5 @@ while vid.isOpened():
     #     break
 
 vid.release()
-cv2.destoryAllWindows()
+cv2.destroyAllWindows()
 

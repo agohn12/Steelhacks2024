@@ -20,7 +20,7 @@ All of the code for this project can be run in one file, OneCallAway.py. We impo
 
 In the Supplementary Files folder, you will find WIPs and additional materials that could be incorporated into OneCallAway.py to make object detection more robust. For example, classes.txt is an array of different objects. This could be used to distinguish people from inanimate objects. 
 
-## How to Run
+## How to run
 
 After cloning the repository run the command, "Python3 OneCallAway.py". Once you run this command the program will begin shortly. A screen will pop displaying the webcam output:
 
